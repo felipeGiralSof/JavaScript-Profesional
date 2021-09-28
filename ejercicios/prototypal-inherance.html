@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototypal-Inherance</title>
+</head>
+<body>
+  <a href="/ejercicios/">Go Back</a>
+  <p><em>Abre la Consola</em></p>
+  <script>
+    function Person(name){
+      this.name = name;
+    }
+
+    Person.prototype.saludar = function(){
+      console.log(`Hola, soy ${this.name}.`);
+    }
+
+    const felipe = new Person('felipe');
+
+    //propiedades de la instancia
+    console.log(`Name: ${felipe.name}`);
+
+    //propiedades de la "clase"
+    console.log(`Saludar: ${felipe.saludar}`);
+
+    //propiedades heredadas ej: toString
+    console.log(`toString: ${felipe.toString}`);
+
+    //hasOwnProperty (de donde sale toString o esto ?)
+    console.log(`felipe.hasOwnProperty("name"): ${felipe.hasOwnProperty('name')}`);
+
+    //inspeccionemos el prototypo del zelda
+    //inspeccionemos el prototypo del Hero
+    //inspeccionemos el prototypo del object 
+  </script>
+</body>
+</html>
